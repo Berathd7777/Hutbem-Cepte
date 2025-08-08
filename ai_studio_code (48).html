@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hutbem Cepte</title>
+
+    <!-- Material Design Lite ve İkonlar -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <style>
+        body {
+            background-color: #ECEFF1; /* Açık gri arka plan */
+        }
+        .mdl-layout__header-row {
+            padding-left: 40px;
+        }
+        .page-content {
+            padding: 24px;
+            max-width: 900px;
+            margin: auto;
+        }
+        /* Yükleniyor animasyonu için */
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        /* Hutbe listesi */
+        .hutbe-list {
+            list-style: none;
+            padding: 0;
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+        }
+        .hutbe-list li {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .hutbe-list li:last-child {
+            border-bottom: none;
+        }
+        .hutbe-list a {
+            text-decoration: none;
+            color: #212121;
+            font-size: 16px;
+            flex-grow: 1;
+            transition: color 0.2s;
+        }
+        .hutbe-list a:hover {
+            color: #03A9F4; /* Light Blue */
+        }
+        .hutbe-list .material-icons {
+            color: #757575;
+            margin-right: 20px;
+        }
+        #error-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #FFCDD2;
+            color: #D32F2F;
+            border-radius: 4px;
+            display: none; /* Başlangıçta gizli */
+        }
+    </style>
+</head>
+<body>
+    <!-- Ana Sayfa Yapısı -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Hutbem Cepte</span>
+            </div>
+        </header>
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Hata Mesajı Alanı -->
+                <div id="error-message"></div>
+
+                <!-- Hutbelerin listeleneceği alan -->
+                <ul class="hutbe-list" id="hutbe-container">
+                    <!-- Hutbeler buraya JavaScript ile eklenecek -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Yükleniyor animasyonu -->
+    <div id="loader" class="mdl-spinner mdl-js-spinner is-active"></div>
+
+    <!-- Uygulama Mantığı (JavaScript) -->
+    <script src="app.js"></script>
+</body>
+</html>
