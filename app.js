@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Tarayıcı güvenlik kısıtlamalarını (CORS) aşmak için bir aracı servis kullanıyoruz.
     // allorigins.win bu iş için popüler ve ücretsiz bir alternatiftir.
-    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(diyanetUrl)}`;
-
+    // YENİ VE DAHA GÜVENİLİR SATIR:
+const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(diyanetUrl)}`;
     const container = document.getElementById('hutbe-container');
     const loader = document.getElementById('loader');
     const errorMessage = document.getElementById('error-message');
